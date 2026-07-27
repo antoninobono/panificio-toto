@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Panificio Totò | Pane, pizza e gastronomia a Tre Fontane</title>
+  <meta name="description" content="Panificio Totò a Tre Fontane: pane, panini imbottiti, gastronomia, pasticceria, tavola calda e pizza al taglio.">
+  <style>
+    :root{--ink:#24180f;--cream:#fff8ed;--paper:#fffdf9;--accent:#b85c2e;--gold:#d89a43;--muted:#6d6258}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--cream);line-height:1.55}
+    a{text-decoration:none;color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 22px}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,248,237,.94);backdrop-filter:blur(12px);border-bottom:1px solid #eadfce}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{font-weight:900;letter-spacing:.04em;font-size:1.15rem}.brand span{color:var(--accent)}
+    .navlinks{display:flex;gap:22px;font-weight:700;font-size:.92rem}.navlinks a:hover{color:var(--accent)}
+    .menu{display:none;border:0;background:none;font-size:1.5rem}
+    .hero{padding:76px 0 70px;background:radial-gradient(circle at 80% 20%,#f5d9a7 0 12%,transparent 36%),linear-gradient(135deg,#fff8ed,#f4e2c5)}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:42px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.78rem;font-weight:900;color:var(--accent)}
+    h1{font-family:Georgia,serif;font-size:clamp(3rem,7vw,5.8rem);line-height:.95;margin:14px 0 24px}
+    .lead{font-size:1.18rem;color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;font-weight:850;border:1px solid var(--ink)}
+    .btn.primary{background:var(--ink);color:#fff;border-color:var(--ink)}.btn.secondary{background:transparent}
+    .hero-card{min-height:360px;border-radius:34px;background:linear-gradient(150deg,#c8733c,#7e3e25);display:flex;align-items:flex-end;padding:30px;color:#fff;box-shadow:0 24px 60px #7c482622}
+    .hero-card strong{font-family:Georgia,serif;font-size:2rem;line-height:1.05}
+    section{padding:78px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:30px}
+    h2{font-family:Georgia,serif;font-size:clamp(2.2rem,5vw,3.4rem);margin:5px 0;line-height:1}.section-head p{color:var(--muted);max-width:520px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--paper);border:1px solid #eadfce;border-radius:24px;padding:25px;min-height:180px}
+    .icon{font-size:2rem}.card h3{margin:12px 0 5px;font-size:1.2rem}.card p{margin:0;color:var(--muted)}
+    .menu-box{background:var(--ink);color:#fff;border-radius:30px;padding:36px;display:flex;justify-content:space-between;gap:25px;align-items:center}
+    .menu-box p{color:#e7dcd1;margin-bottom:0}.menu-box .btn{background:#fff;color:var(--ink);border-color:#fff;white-space:nowrap}
+    .locations{background:#f0dfc5}.location{background:rgba(255,255,255,.72);border:1px solid #e1cbaa}
+    .location h3{font-family:Georgia,serif;font-size:1.45rem}.tag{display:inline-block;padding:5px 9px;border-radius:999px;background:#f3d9bd;color:#7d3d20;font-weight:800;font-size:.75rem}
+    .review{min-height:220px}.stars{letter-spacing:.12em}.review p{font-family:Georgia,serif;font-size:1.05rem}
+    .contact{background:#24180f;color:#fff}.contact p{color:#d9cdc2}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}.contact-card{padding:25px;border:1px solid #55483d;border-radius:24px}
+    footer{background:#24180f;color:#bfb2a7;padding:25px 0;border-top:1px solid #55483d;font-size:.9rem}
+    @media(max-width:800px){.navlinks{display:none}.menu{display:block}.hero{padding-top:52px}.hero-grid,.contact-grid{grid-template-columns:1fr}.grid{grid-template-columns:1fr 1fr}.hero-card{min-height:280px}.section-head{display:block}.menu-box{display:block}.menu-box .btn{margin-top:18px}}
+    @media(max-width:520px){.grid{grid-template-columns:1fr}section{padding:58px 0}.hero{padding-bottom:50px}h1{font-size:3.5rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#home">PANIFICIO <span>TOTÒ</span></a>
+      <div class="navlinks">
+        <a href="#prodotti">Prodotti</a><a href="#menu">Menù</a><a href="#sedi">Sedi</a><a href="#recensioni">Recensioni</a><a href="#contatti">Contatti</a>
+      </div>
+      <button class="menu" aria-label="Apri menu" onclick="document.querySelector('.navlinks').classList.toggle('open')">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Tre Fontane · Sicilia</div>
+      <h1>Il gusto della tradizione, ogni giorno.</h1>
+      <p class="lead">Pane, pizza al taglio, gastronomia, panini, pasticceria e tavola calda. Tutto fresco, preparato con passione.</p>
+      <div class="actions">
+        <a class="btn primary" href="tel:+393458113570">📞 Prenota ora</a>
+        <a class="btn secondary" href="#sedi">📍 Trova la sede</a>
+      </div>
+    </div>
+    <div class="hero-card"><div><div class="eyebrow" style="color:#ffe2bd">Panificio · Gastronomia</div><strong>Cu mancia pani<br>fa muddrichi.</strong></div></div>
+  </div>
+</section>
+
+<section id="prodotti">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Cosa trovi da noi</div><h2>I nostri prodotti</h2></div><p>Una selezione pensata per la colazione, il pranzo, una pausa veloce o una cena da portare a casa.</p></div>
+    <div class="grid">
+      <article class="card"><div class="icon">🥖</div><h3>Pane</h3><p>Pane fresco e profumato, protagonista della nostra tradizione.</p></article>
+      <article class="card"><div class="icon">🥪</div><h3>Panini imbottiti</h3><p>Ideali per una pausa veloce e gustosa.</p></article>
+      <article class="card"><div class="icon">🍝</div><h3>Gastronomia</h3><p>Piatti pronti e specialità per un pranzo ricco di gusto.</p></article>
+      <article class="card"><div class="icon">🍰</div><h3>Pasticceria</h3><p>Dolci e biscotti per accompagnare ogni momento.</p></article>
+      <article class="card"><div class="icon">🍽️</div><h3>Tavola calda</h3><p>Soluzioni sfiziose e sostanziose, anche da asporto.</p></article>
+      <article class="card"><div class="icon">🍕</div><h3>Pizza al taglio</h3><p>Una fetta, un pranzo o una cena: scegli la tua preferita.</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="menu">
+  <div class="wrap">
+    <div class="menu-box">
+      <div><div class="eyebrow" style="color:#e5a96d">Ogni giorno</div><h2>Scopri il menù</h2><p>Controlla le proposte del giorno e scegli cosa portare a tavola.</p></div>
+      <a class="btn" href="/menu-giornaliero">Vai al menù giornaliero →</a>
+    </div>
+  </div>
+</section>
+
+<section id="sedi" class="locations">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Vieni a trovarci</div><h2>Le nostre sedi</h2></div><p>Tre punti di riferimento a Tre Fontane. Prima di pubblicare il nuovo sito, verifica gli orari aggiornati di ciascuna sede.</p></div>
+    <div class="grid">
+      <article class="card location"><span class="tag">Sede 1</span><h3>Via della Chiesa</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><div class="actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Via%20della%20Chiesa%2C%20Tre%20Fontane%2C%20Campobello%20di%20Mazara%20TP">Come arrivare</a></div></article>
+      <article class="card location"><span class="tag">Sede 2</span><h3>Via Trapani 25</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><div class="actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Via%20Trapani%2025%2C%20Tre%20Fontane%2C%20Campobello%20di%20Mazara%20TP">Come arrivare</a></div></article>
+      <article class="card location"><span class="tag">Sede 3</span><h3>Via Circonvallazione Est 96</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><div class="actions"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&query=Via%20Circonvallazione%20Est%2096%2C%20Tre%20Fontane%2C%20Campobello%20di%20Mazara%20TP">Come arrivare</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="recensioni">
+  <div class="wrap">
+    <div class="section-head"><div><div class="eyebrow">Le vostre parole</div><h2>Dicono di noi ⭐</h2></div><p>Alcune delle recensioni già presenti sul sito.</p></div>
+    <div class="grid">
+      <article class="card review"><div class="stars">★★★★★</div><p>“Panificio ottimo, la gastronomia è ottima ed è tutta buona. [...] personale molto ottimo e gentile.”</p></article>
+      <article class="card review"><div class="stars">★★★★★</div><p>“Posto davvero fantastico, ragazze gentilissime e sempre a disposizione, cibo fantastico.”</p></article>
+      <article class="card review"><div class="stars">★★★★★</div><p>“Ottimo posto per pranzare, trovate di tutto [...] pagando poco. Ragazze cordiali e gentilissime.”</p></article>
+    </div>
+  </div>
+</section>
+
+<section id="contatti" class="contact">
+  <div class="wrap contact-grid">
+    <div><div class="eyebrow" style="color:#e5a96d">Parliamo</div><h2>Hai fame? Siamo qui.</h2><p>Per prenotazioni e informazioni puoi chiamarci direttamente.</p></div>
+    <div class="contact-card">
+      <strong>📞 345 811 3570</strong><br>
+      <strong>📞 347 496 1748</strong><br><br>
+      <a class="btn" style="background:#fff;color:#24180f;border-color:#fff" href="mailto:info@panificiototo.it">✉️ Scrivi una e-mail</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Panificio Totò · Produzione Pane Pizza · P.IVA 02167600812 · Tre Fontane, Campobello di Mazara (TP)</div>
+</footer>
+
+<script>
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.querySelector('.navlinks').classList.remove('open')));
+</script>
+</body>
+</html>
