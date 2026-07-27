@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panificio Totò | Panificio & Gastronomia</title>
+<meta name="description" content="Panificio Totò: pane, gastronomia, pasticceria, tavola calda, pizza a taglio e panini imbottiti a Tre Fontane.">
+<style>
+:root{
+  --brown:#4b2e1f; --cream:#fff8ee; --gold:#c8944b; --dark:#211711;
+  --white:#fff; --muted:#765f50;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--dark);background:var(--cream);line-height:1.55}
+a{color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(255,248,238,.96);backdrop-filter:blur(8px);border-bottom:1px solid #eadbc8}
+.nav{max-width:1120px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+.logo{font-weight:900;letter-spacing:.08em;color:var(--brown);font-size:1.05rem}
+.navlinks{display:flex;gap:24px;align-items:center}
+.navlinks a{text-decoration:none;font-weight:700;font-size:.95rem}
+.menu-btn{display:none;border:0;background:var(--brown);color:white;border-radius:10px;padding:9px 12px;font-size:1.1rem}
+.hero{min-height:72vh;display:grid;place-items:center;text-align:center;color:white;padding:70px 20px;background:linear-gradient(rgba(42,24,14,.45),rgba(42,24,14,.68)),url("https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=1800&q=85") center/cover}
+.hero-inner{max-width:820px}
+.kicker{text-transform:uppercase;letter-spacing:.18em;font-weight:800;font-size:.85rem}
+h1{font-size:clamp(2.5rem,7vw,5.4rem);line-height:.98;margin:14px 0}
+.hero p{font-size:clamp(1.05rem,2.5vw,1.35rem);max-width:650px;margin:0 auto 28px}
+.btns{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;text-decoration:none;padding:13px 19px;border-radius:999px;font-weight:800}
+.btn.primary{background:var(--gold);color:#211711}
+.btn.light{border:1px solid rgba(255,255,255,.8);color:white;background:rgba(255,255,255,.08)}
+section{max-width:1120px;margin:auto;padding:76px 20px}
+.section-title{text-align:center;max-width:720px;margin:0 auto 36px}
+.section-title h2{font-size:clamp(2rem,5vw,3.1rem);margin:0 0 10px;color:var(--brown)}
+.section-title p{color:var(--muted);margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:white;border:1px solid #eadbc8;border-radius:20px;padding:26px;box-shadow:0 8px 25px rgba(75,46,31,.06)}
+.icon{font-size:2rem}
+.card h3{margin:10px 0 5px;color:var(--brown)}
+.card p{margin:0;color:var(--muted)}
+.highlight{background:var(--brown);color:white}
+.highlight .section-title h2{color:white}
+.highlight .section-title p{color:#eadbc8}
+.product-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.product{background:#fff;border-radius:18px;padding:20px;border:1px solid #eadbc8;display:flex;gap:15px;align-items:flex-start}
+.product span{font-size:1.7rem}
+.product h3{margin:0 0 4px;color:var(--brown)}
+.product p{margin:0;color:var(--muted)}
+.locations{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.location{background:white;border-radius:20px;padding:24px;border:1px solid #eadbc8}
+.location h3{margin-top:0;color:var(--brown)}
+.location a{display:inline-block;margin-top:12px;font-weight:800;color:var(--brown)}
+.contact{background:#f0e2d0;border-radius:28px;padding:36px;text-align:center}
+.contact-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:20px}
+footer{background:#211711;color:#f7eadb;padding:30px 20px;text-align:center}
+footer p{margin:5px 0;font-size:.9rem}
+@media(max-width:760px){
+  .menu-btn{display:block}
+  .navlinks{display:none;position:absolute;left:12px;right:12px;top:64px;background:#fff8ee;border:1px solid #eadbc8;border-radius:16px;padding:12px;box-shadow:0 15px 35px rgba(0,0,0,.12);flex-direction:column;gap:4px}
+  .navlinks.open{display:flex}
+  .navlinks a{width:100%;padding:12px 14px;border-radius:10px}
+  .cards,.locations,.product-grid{grid-template-columns:1fr}
+  .hero{min-height:78vh}
+  section{padding:58px 16px}
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <div class="logo">PANIFICIO TOTÒ</div>
+    <button class="menu-btn" aria-label="Apri menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#prodotti" onclick="closeMenu()">Prodotti</a>
+      <a href="#pollo" onclick="closeMenu()">Pollo allo spiedo</a>
+      <a href="#sedi" onclick="closeMenu()">Le nostre sedi</a>
+      <a href="#contatti" onclick="closeMenu()">Contatti</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="kicker">Panificio & Gastronomia</div>
+    <h1>Il profumo del pane, la qualità di ogni giorno.</h1>
+    <p>Pane, gastronomia, pasticceria, tavola calda, pizza a taglio e panini imbottiti. Sempre tutto fresco.</p>
+    <div class="btns">
+      <a class="btn primary" href="#prodotti">Scopri i prodotti</a>
+      <a class="btn light" href="#sedi">Le nostre sedi</a>
+    </div>
+  </div>
+</section>
+
+<section id="prodotti">
+  <div class="section-title">
+    <h2>I nostri prodotti</h2>
+    <p>Una selezione delle specialità che trovi da Panificio Totò.</p>
+  </div>
+  <div class="cards">
+    <article class="card"><div class="icon">🥖</div><h3>Pane e panini</h3><p>Pane fresco e panini imbottiti, preparati ogni giorno.</p></article>
+    <article class="card"><div class="icon">🍕</div><h3>Pizza a taglio</h3><p>Ideale per uno spuntino veloce o da condividere.</p></article>
+    <article class="card"><div class="icon">🍝</div><h3>Gastronomia</h3><p>Piatti pronti e specialità della tavola calda.</p></article>
+  </div>
+  <div class="product-grid" style="margin-top:18px">
+    <article class="product"><span>🍰</span><div><h3>Pasticceria</h3><p>Dolci e prodotti da forno per ogni momento della giornata.</p></div></article>
+    <article class="product"><span>🥪</span><div><h3>Panini imbottiti</h3><p>Preparazioni fresche e gustose.</p></div></article>
+  </div>
+</section>
+
+<section class="highlight" id="pollo">
+  <div class="section-title">
+    <h2>Pollo allo spiedo</h2>
+    <p>Una delle specialità da portare a casa: caldo, saporito e pronto da gustare.</p>
+  </div>
+  <div style="text-align:center"><a class="btn primary" href="#contatti">Contattaci</a></div>
+</section>
+
+<section id="sedi">
+  <div class="section-title">
+    <h2>Le nostre sedi</h2>
+    <p>Vieni a trovarci a Tre Fontane.</p>
+  </div>
+  <div class="locations">
+    <article class="location"><h3>📍 Via della Chiesa</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><a href="https://www.google.com/maps/search/?api=1&query=Via%20della%20Chiesa%20Tre%20Fontane%20Campobello%20di%20Mazara" target="_blank" rel="noopener">Apri su Maps →</a></article>
+    <article class="location"><h3>📍 Via Trapani 25</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><a href="https://www.google.com/maps/search/?api=1&query=Via%20Trapani%2025%20Tre%20Fontane%20Campobello%20di%20Mazara" target="_blank" rel="noopener">Apri su Maps →</a></article>
+    <article class="location"><h3>📍 Via Circonvallazione Est 96</h3><p>Tre Fontane, Campobello di Mazara (TP)</p><a href="https://www.google.com/maps/search/?api=1&query=Via%20Circonvallazione%20Est%2096%20Tre%20Fontane%20Campobello%20di%20Mazara" target="_blank" rel="noopener">Apri su Maps →</a></article>
+  </div>
+</section>
+
+<section id="contatti">
+  <div class="contact">
+    <div class="section-title" style="margin-bottom:0">
+      <h2>Contatti</h2>
+      <p>Per informazioni e prenotazioni puoi chiamarci direttamente.</p>
+    </div>
+    <div class="contact-actions">
+      <a class="btn primary" href="tel:+393458113570">📞 345 811 3570</a>
+      <a class="btn primary" href="tel:+393474961748">📞 347 496 1748</a>
+      <a class="btn" style="background:white;color:var(--brown)" href="mailto:info@panificiototo.it">✉️ Scrivici</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p><strong>PRODUZIONE PANE PIZZA | PANIFICIO TOTÒ</strong></p>
+  <p>P.IVA 02167600812 · Tre Fontane, Campobello di Mazara (TP)</p>
+  <p>© 2026 Panificio Totò</p>
+</footer>
+
+<script>
+function toggleMenu(){
+  const menu=document.getElementById('navlinks');
+  const btn=document.querySelector('.menu-btn');
+  const open=menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded',open);
+}
+function closeMenu(){document.getElementById('navlinks').classList.remove('open');}
+</script>
+</body>
+</html>
